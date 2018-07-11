@@ -3,7 +3,6 @@ pipeline:
     image: mongo:3.0
     commands:
       - sleep 15
-      - mongo --host mongo --eval "{ ping: 1 }"
   build:
     image: node:${NODE_VERSION}
     commands:
