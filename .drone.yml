@@ -1,0 +1,34 @@
+pipeline:
+  ping:
+    image: mongo:3.0
+    commands:
+      - sleep 15
+      - mongo --host mongo --eval "{ ping: 1 }"
+  build:
+    image: node:${NODE_VERSION}
+    commands:
+      - npm install
+      - npm test
+  npm_auth:
+    image: robertstettner/drone-npm-auth
+    secrets: [ npm_username, npm_password, npm_email ]
+    when:
+      branch: master
+  publish:
+    image: node:latest
+    commands:
+      - node version.js
+      - npm publish
+    when:
+      branch: master
+
+services:
+  mongo:
+    image: mongo:3.0
+    command: [ --smallfiles ]
+
+matrix:
+  NODE_VERSION:
+    - 7
+    - 8
+    - 9

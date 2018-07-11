@@ -5,12 +5,13 @@
   "main": "dist/index.js",
   "author": "Matthew Wozniak <matisiek11@gmail.com>",
   "scripts": {
-    "compile": "tsc",
+    "build": "tsc",
     "dev": "nodemon",
     "docs": "typedoc --out ./docs ./src",
     "test": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prestart": "npm run -s build"
   },
   "license": "MIT",
   "devDependencies": {
@@ -28,8 +29,10 @@
     "consola": "^1.4.1",
     "express": "^4.16.3",
     "firebase": "^5.2.0",
+    "firebase-websockets-adapter": "^1.0.20",
     "lodash": "^4.17.10",
     "mongodb": "^3.1.0",
+    "node-fetch": "^2.1.2",
     "vm2": "^3.6.1"
   },
   "jest": {
