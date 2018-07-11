@@ -1,9 +1,11 @@
 pipeline:
   ping:
+    group: test
     image: mongo:3.0
     commands:
       - sleep 15
   build:
+    group: test
     image: node:${NODE_VERSION}
     commands:
       - npm install
