@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": false,
+    "strict": false,
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "lib": [
+      "es2017"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
