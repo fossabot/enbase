@@ -11,7 +11,8 @@
     "test": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "start": "node dist/index.js",
-    "prestart": "npm run -s build"
+    "prestart": "npm run -s build",
+    "prepare": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
