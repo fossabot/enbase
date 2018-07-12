@@ -17,7 +17,8 @@ pipeline:
     image: node:latest
     commands:
       - npm run build
-      - npm publish --tag canary-${DRONE_TAG:0:8}
+      - node version.js
+      - npm publish
     when:
       branch: master
       event: push
