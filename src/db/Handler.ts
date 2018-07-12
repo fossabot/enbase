@@ -1,8 +1,8 @@
 import * as express from "express";
-//import firebaseAdapter from "firebase-websockets-adapter";
+import firebaseAdapter from "firebase-websockets-adapter";
 import {EntityRepository} from "./repositories/EntityRepository";
 import {Server} from "./Server";
-const firebaseAdapter = require('firebase-websockets-adapter');
+//const firebaseAdapter = require('firebase-websockets-adapter');
 /**
  * Handler, handles database routes and ws connections
  */
