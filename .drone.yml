@@ -10,6 +10,7 @@ pipeline:
     environment:
       - MONGO_URL=mongodb://mongo:27017
     commands:
+      - export MONGO_URL=mongodb://mongo:27017
       - npm install
       - npm test
   npm_auth:
