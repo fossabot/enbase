@@ -12,7 +12,7 @@ pipeline:
     commands:
       - export MONGO_URL=mongodb://mongo:27017
       - npm install
-      - npm test
+      - MONGO_URL=mongodb://mongo:27017 npm test
   npm_auth:
     image: robertstettner/drone-npm-auth
     secrets: [ npm_username, npm_password, npm_email ]
