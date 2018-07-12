@@ -6,7 +6,7 @@ fetch(`http://registry.npmjs.com/${packageJson.name}/latest`)
         const version = packageJsonFromRegistry.version;
         console.log(`Updating from ${version}`);
         const versionSegments = version.split('.');
-        const updatedVersion = `${versionSegments[0]}.${versionSegments[1]}.${parseInt(versionSegments[2]) + 1}`;
+        const updatedVersion = `${versionSegments[0]}.${versionSegments[1]}.${versionSegments[2]}-canary.${parseInt(versionSegments[2]) + 1}`;
         packageJson.version = updatedVersion;
         const fs = require('fs');
         fs.writeFile('./package.json', JSON.stringify(packageJson), function(err) {
