@@ -7,6 +7,8 @@ pipeline:
   build:
     group: test
     image: node:${NODE_VERSION}
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
     commands:
       - npm install
       - npm test
