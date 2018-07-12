@@ -2,7 +2,7 @@ import {Enbase} from "../src/Enbase";
 
 const firebase = require('firebase');
 const MongoClient = require('mongodb').MongoClient;
-const url = process.env.MONGO_URL || "mongodb://localhost:27017/";
+const url = process.env.MONGO_URL || "mongodb://mongo:27017/";
 
 let server: Enbase = new Enbase();
 let dbInst;
