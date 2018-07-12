@@ -7,12 +7,10 @@ pipeline:
   build:
     group: test
     image: node:${NODE_VERSION}
-    environment:
-      - MONGO_URL=mongodb://mongo:27017
     commands:
-      - export MONGO_URL=mongodb://mongo:27017
+      - export MONGO_URL="mongodb://mongo:27017"
       - npm install
-      - MONGO_URL=mongodb://mongo:27017 npm test
+      - MONGO_URL="mongodb://mongo:27017" npm test
   npm_auth:
     image: robertstettner/drone-npm-auth
     secrets: [ npm_username, npm_password, npm_email ]
