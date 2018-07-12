@@ -15,6 +15,7 @@ pipeline:
   publish:
     image: node:latest
     commands:
+      - npm run build
       - node version.js
       - npm publish
     when:
