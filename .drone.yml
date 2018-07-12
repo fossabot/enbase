@@ -1,13 +1,9 @@
 pipeline:
-  ping:
-    group: test
-    image: mongo:3.0
-    commands:
-      - sleep 15
   build:
     group: test
     image: node:${NODE_VERSION}
     commands:
+      - ping 15
       - export MONGO_URL="mongodb://mongo:27017"
       - npm install
       - npm install -g jest
@@ -32,6 +28,5 @@ services:
 
 matrix:
   NODE_VERSION:
-    - 7
     - 8
     - 9
