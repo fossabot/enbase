@@ -10,7 +10,8 @@ pipeline:
     commands:
       - export MONGO_URL="mongodb://mongo:27017"
       - npm install
-      - MONGO_URL="mongodb://mongo:27017" npm test
+      - npm install -g jest
+      - MONGO_URL="mongodb://mongo:27017" jest
   npm_auth:
     image: robertstettner/drone-npm-auth
     secrets: [ npm_username, npm_password, npm_email ]
