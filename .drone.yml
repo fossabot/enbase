@@ -21,7 +21,7 @@ pipeline:
       branch: master
 
 services:
-  localhost:
+  mongo:
     image: mongo:3.0
     command: [ --smallfiles ]
 
