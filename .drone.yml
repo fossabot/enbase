@@ -1,7 +1,7 @@
 pipeline:
   build:
     group: test
-    image: node:${NODE_VERSION}
+    image: node:latest
     commands:
       - export MONGO_URL="mongodb://mongo:27017"
       - npm install
@@ -23,9 +23,4 @@ pipeline:
 services:
   mongo:
     image: mongo:3.0
-    command: [ --smallfiles ]
-
-matrix:
-  NODE_VERSION:
-    - 8
-    - 9
+    command: [ --smallfiles ] 
