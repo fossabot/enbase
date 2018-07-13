@@ -18,7 +18,7 @@ pipeline:
     commands:
       - npm run build
       - node version.js
-      - npm publish --tag canary
+      - npm publish
     when:
       branch: master
       event: push
