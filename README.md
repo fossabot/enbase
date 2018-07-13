@@ -1,5 +1,7 @@
 # Enbase
 
+[![Drone.io badge](http://matisiekpl.nazwa.pl:7111/api/badges/enteam/enbase/status.svg)](https://drone.io/)
+[![npm version](https://badge.fury.io/js/enbase.svg)](https://badge.fury.io/js/enbase)
 [![Greenkeeper badge](https://badges.greenkeeper.io/enteam/enbase.svg)](https://greenkeeper.io/)
 
 Open source implementation of Google's Firebase Realtime Database with fully support for security rules and auth!
