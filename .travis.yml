@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 8
+cache: yarn
+
+# Define global C++ compiler version
+env:
+  global:
+    - CXX=g++-4.8
+before_install:
+  # Yarn defaults to an old version, make sure we
+  # get an up to date version
+  - npm install -g yarn
+  - '[ "${NPM_TOKEN+x}" ] && echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc || echo "Skipping .npmrc creation";'
+
+matrix:
+  fast_finish: true
