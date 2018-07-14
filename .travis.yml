@@ -25,5 +25,6 @@ jobs:
     - stage: test
       script: yarn test
     - stage: publish
-      script: yarn run bump
-      script: yarn publish
+      script: 
+       - yarn run bump
+       - yarn publish
