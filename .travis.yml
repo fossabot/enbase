@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 8
+cache: yarn
+
+# Define global C++ compiler version
+env:
+  global:
+    - CXX=g++-4.8
+before_install:
+  # Yarn defaults to an old version, make sure we
+  # get an up to date version
+  - sleep 15
+  - npm install -g yarn
+  - '[ "${NPM_TOKEN+x}" ] && echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc || echo "Skipping .npmrc creation";'
+
+matrix:
+  fast_finish: true
+  
+services:
+  - mongodb
+
+jobs:
+  include:
+    - stage: test
+      script: yarn test
+    - stage: publish
+      script: 
+       - yarn run bump
+       - npm publish
+      if: type = push AND repo = enteam/enbase AND branch = master

@@ -12,7 +12,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "start": "node dist/index.js",
     "prestart": "npm run -s build",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "bump": "node version.js"
   },
   "license": "MIT",
   "devDependencies": {
