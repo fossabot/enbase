@@ -38,6 +38,8 @@
     "vm2": "3.6.1"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },

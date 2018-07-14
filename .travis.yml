@@ -11,7 +11,7 @@ before_install:
   # Yarn defaults to an old version, make sure we
   # get an up to date version
   - sleep 15
-  - npm install -g yarn
+  - npm install -g yarn jest codecov
   - '[ "${NPM_TOKEN+x}" ] && echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc || echo "Skipping .npmrc creation";'
 
 matrix:
@@ -23,7 +23,9 @@ services:
 jobs:
   include:
     - stage: test
-      script: yarn test
+      script: 
+       - jest
+       - codecov
     - stage: publish
       script: 
        - yarn run bump
