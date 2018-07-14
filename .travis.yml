@@ -22,7 +22,8 @@ services:
 
 jobs:
   include:
-    - script: npm test
+    - stage: test
+      script: test
     - stage: publish
       script: node version.js
       script: npm publish
