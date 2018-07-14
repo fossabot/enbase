@@ -10,6 +10,7 @@ env:
 before_install:
   # Yarn defaults to an old version, make sure we
   # get an up to date version
+  - sleep 15
   - npm install -g yarn
   - '[ "${NPM_TOKEN+x}" ] && echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc || echo "Skipping .npmrc creation";'
 
