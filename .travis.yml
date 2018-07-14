@@ -19,3 +19,10 @@ matrix:
   
 services:
   - mongodb
+
+jobs:
+  include:
+    - script: npm test
+    - stage: publish
+      script: node version.js
+      script: npm publish
