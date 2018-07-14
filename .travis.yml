@@ -25,5 +25,5 @@ jobs:
     - stage: test
       script: yarn test
     - stage: publish
-      script: node version.js
-      script: npm publish
+      script: yarn run bump
+      script: yarn publish
