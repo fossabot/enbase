@@ -28,3 +28,4 @@ jobs:
       script: 
        - yarn run bump
        - npm publish
+      if: type = push AND repo = enteam/enbase AND branch = master
