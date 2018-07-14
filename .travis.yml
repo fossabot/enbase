@@ -27,4 +27,4 @@ jobs:
     - stage: publish
       script: 
        - yarn run bump
-       - yarn publish
+       - npm publish
