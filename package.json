@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "23.1.4",
+    "@types/jest": "23.3.0",
     "jest": "23.3.0",
     "request": "2.87.0",
     "ts-jest": "23.0.0",
