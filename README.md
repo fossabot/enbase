@@ -3,6 +3,7 @@
 [![Drone.io badge](http://matisiekpl.nazwa.pl:7111/api/badges/enteam/enbase/status.svg)](https://drone.io/)
 [![npm version](https://badge.fury.io/js/enbase.svg)](https://badge.fury.io/js/enbase)
 [![Greenkeeper badge](https://badges.greenkeeper.io/enteam/enbase.svg)](https://greenkeeper.io/)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fenteam%2Fenbase.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fenteam%2Fenbase?ref=badge_shield)
 
 Open source implementation of Google's Firebase Realtime Database :fire: with fully support for security rules :police_car: and auth! :credit_card:
 
@@ -58,3 +59,7 @@ const app = firebase.initializeApp({
   databaseURL: `ws://localhost:3000`,
 });
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fenteam%2Fenbase.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fenteam%2Fenbase?ref=badge_large)
